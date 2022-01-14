@@ -140,9 +140,8 @@
     padding: 36px 62px;
     border-top: 2px solid rgba(226, 226, 226, 0.562);
     border-bottom: 2px solid rgba(226, 226, 226, 0.562);
+    margin-bottom: 100px;
 }
-
-.icon-list {}
 
 .icon-list img {
     margin-right: 35px;
@@ -157,6 +156,85 @@
 ======= Collection ====== 
 ================*/
 
+.collection {
+    margin-right: 197px;
+    margin-left: 197px;
+    margin-bottom: 100px;
+}
+
+.collection-header {
+    margin-bottom: 30px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 70px;
+}
+
+.popular-collection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+}
+
+.card {
+    width: 329px;
+    height: 476px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.card-img {
+    width: 300px;
+    height: 256px;
+    border-radius: 5px;
+    padding: 17px 15px;
+}
+
+.card-details {
+    margin-left: 15px;
+}
+
+.img-name {
+    width: 151px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.amount {
+    height: 36px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.rating i {
+    color: #FB8200;
+    padding-right: 11px;
+    width: 8px;
+    height: 8px;
+}
+
+.description {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 143%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.018em;
+    color: #787885;
+    padding-top: 5px;
+}
+
 
 /* ================
 ======= Contact Us ====== 
@@ -166,6 +244,38 @@
 /* ================
 ======= Footer ====== 
 ================*/
+
+.footer {
+    background-color: rgb(2, 2, 56);
+    color: #FFFFFF;
+    padding: 50px 580px;
+    text-align: center;
+}
+
+.footer-header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: #D9DBE1;
+    letter-spacing: 1px;
+}
+
+.social-icon i {
+    padding-right: 10px;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 22px;
+}
 
 
 /* ================
