@@ -1,414 +1,460 @@
-    /* ================
-======= Font ====== 
-================*/
-    
-    @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Oxygen&family=Poppins:wght@400;500;700&display=swap');
-    /* ================
-======= Utilities ====== 
-================*/
-    
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: 'Poppins', sans-serif;
+/* ====================
+===Google Font link==== 
+======================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+/*  ======================
+  ====Utilities styles=== 
+=========================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.link-btn {
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #e02c6d;
+    padding: 10px 24px;
+    border: 1px solid #e02c6d;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.link-btn:hover {
+    color: #e02c6d;
+    font-weight: bolder;
+    background-color: transparent;
+}
+
+.fa-arrow-right {
+    transition: 0.5s ease-in-out;
+}
+
+.link-btn:hover .fa-arrow-right {
+    transform: translateX(20px);
+}
+
+
+/* ======================
+      Nav Bar style  
+======================*/
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px 120px;
+}
+
+.nav-brand a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.nav-links {
+    position: relative;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+.nav-links ul a {
+    text-decoration: none;
+    display: block;
+    font-size: 19px;
+    color: #000000;
+    font-weight: 600;
+}
+
+
+/*======================
+       Header Section 
+ ====================== */
+
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left,
+.header-right {
+    flex: 1;
+}
+
+.header-right {
+    margin-left: 30px;
+}
+
+.header-title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.header-left p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.header-img {
+    background-image: url('images/Circle design.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.header-img img {
+    width: 100%;
+}
+
+
+/* ======================
+      Brand style start 
+      ======================*/
+
+.brands {
+    margin: 100px 0;
+    border-top: 2px solid rgba(226, 226, 226, 0.562);
+    border-bottom: 2px solid rgba(226, 226, 226, 0.562);
+}
+
+.brands-list {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 36px 62px;
+}
+
+.brands-list li {
+    list-style: none;
+    display: block;
+}
+
+.brands-list li a {
+    text-decoration: none;
+}
+
+.brands-list li a img {
+    width: 100%;
+}
+
+
+/* ======================
+      products style start 
+     ======================*/
+
+#products {
+    height: auto;
+    margin: 100px auto;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.product-item {
+    padding: 15px;
+    background-color: #fff;
+    color: #000000;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 5px;
+}
+
+.product-description {
+    color: #5f5f5f;
+}
+
+.thumbnail {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail .product-img {
+    top: 0;
+    left: 0;
+    transition: transform 0.6s ease-in;
+}
+
+.product-item:hover .product-img {
+    transform: scale(1.2);
+}
+
+.product-name {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 16px 0 6px 0;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.product-rating {
+    padding: 6px 0;
+}
+
+.fa-star,
+.fa-star-half-alt {
+    color: #fb8200;
+}
+
+.product-description {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.btn-box {
+    text-align: right;
+}
+
+.see-more-btn {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #e02c6d;
+    text-align: right;
+    padding: 10px 24px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.see-more-btn:hover {
+    color: #fff;
+    background-color: #e02c6d;
+    border-radius: 40px;
+    transition: 0.4s linear;
+}
+
+
+/* ======================
+   contact section style start 
+  ======================*/
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.section-title h2 {
+    margin-top: 70px;
+}
+
+.contact-left img {
+    width: 100%;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-field {
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 18px;
+    font-family: inherit;
+    outline: 0;
+    border: 1px solid #FF008E;
+}
+
+
+/* ======================
+      footer style start 
+    ======================*/
+
+footer {
+    max-width: 100%;
+    height: 45vh;
+    background-color: rgb(3, 4, 61);
+    color: #fff;
+}
+
+.footer-title {
+    margin-bottom: 10px;
+}
+
+.footer-details {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.social-link {
+    margin: 17px 0;
+}
+
+.social-link-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link-icon li {
+    list-style: none;
+    margin: 0 16px;
+    transition: 0.5s ease-out;
+}
+
+.social-link-icon li:hover {
+    transform: translateY(30px);
+}
+
+.social-link-icon li a {
+    color: rgb(1, 2, 97);
+    font-size: 23px;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.social-link-icon li:hover a {
+    color: #e02c6d;
+    transition: 0.5s ease-in;
+}
+
+
+/* =======================
+      Media Queries for  Mobile 
+      ================================*/
+
+@media only screen and (max-width: 688px) {
+    .container {
+        width: 100%;
     }
-    
-    .highlight {
-        color: #E02C6D;
+    .nav-links {
+        display: none;
     }
-    /* ================
-======= Navbar ====== 
-================*/
-    
-    .navbar {
-        display: flex;
-        margin-left: 120px;
-        margin-right: 120px;
-        margin-top: 50px;
+    .header-main {
+        flex-direction: column-reverse;
     }
-    
-    .nav-icon {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 36px;
-        display: flex;
-        margin-right: 494px;
-    }
-    
-    .nav-list>ul {
-        display: flex;
-    }
-    
-    .nav-list>ul>li {
-        list-style-type: none;
-    }
-    
-    .nav-list a {
-        text-decoration: none;
-        margin-right: 30px;
-        color: black;
-        font-weight: bold;
-    }
-    /* ================
-======= Header ====== 
-================*/
-    
-    .header {
-        height: calc(100vh - 84px);
-        margin-left: 120px;
-        margin-right: 120px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
     .header-left {
-        margin-top: 140px;
-        margin-right: 60px;
+        text-align: center;
+        padding: 10px 20px;
     }
-    
+    .header-right {
+        width: 80%;
+    }
     .header-title {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 52px;
-        line-height: 70px;
-    }
-    
-    .header-left p {
-        margin-bottom: 16px;
-    }
-    
-    .btn {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        padding: 10px 24px;
-        width: 196px;
-        height: 44px;
-        left: 101px;
-        top: 523px;
-        background: #E02C6D;
-        border-radius: 41px;
-        border: #E02C6D;
-        margin-right: 10px;
-        color: white;
-        align-items: center;
-        cursor: pointer;
-    }
-    
-    .right-arrow {
-        margin-left: 20px;
-    }
-    
-    .btn:hover {
-        transition: ;
-    }
-    
-    .background-circle {
-        position: absolute;
-        width: 450px;
-        height: 475px;
-        left: 833px;
-        top: 181px;
-        opacity: 0.7;
-    }
-    
-    .header-img {
-        position: absolute;
-        width: 410px;
-        height: 390px;
-        left: 835px;
-        top: 211px;
-    }
-    /* ================
-======= Icon ====== 
-================*/
-    
-    .icon {
-        margin-left: 165px;
-        margin-right: 165px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 36px 62px;
-        border-top: 2px solid rgba(226, 226, 226, 0.562);
-        border-bottom: 2px solid rgba(226, 226, 226, 0.562);
-        margin-bottom: 100px;
-    }
-    
-    .icon-list img {
-        margin-right: 35px;
-        width: 99.12px;
-        height: 39.61px;
-        left: 632.47px;
-        top: 761px;
-    }
-    /* ================
-======= Icon ====== 
-================*/
-    
-    .icon {
-        margin-left: 165px;
-        margin-right: 165px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 36px 62px;
-        border-top: 2px solid rgba(226, 226, 226, 0.562);
-        border-bottom: 2px solid rgba(226, 226, 226, 0.562);
-        margin-bottom: 100px;
-    }
-    
-    .icon-list img {
-        margin-right: 35px;
-        width: 99.12px;
-        height: 39.61px;
-        left: 632.47px;
-        top: 761px;
-    }
-    /* ================
-======= Collection ====== 
-================*/
-    
-    .collection {
-        margin-right: 197px;
-        margin-left: 197px;
-        margin-bottom: 100px;
-    }
-    
-    .collection-header {
-        margin-bottom: 30px;
-        text-align: center;
-        font-style: normal;
-        font-weight: 600;
         font-size: 30px;
-        line-height: 70px;
     }
-    
-    .popular-collection {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-row-gap: 30px;
-        grid-column-gap: 30px;
+    .brands {
+        margin: 50px 0;
     }
-    
-    .card {
-        width: 329px;
-        height: 476px;
-        background: #FFFFFF;
-        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
-        border-radius: 5px;
+    .brands-list {
+        flex-direction: column;
     }
-    
-    .card-img {
-        width: 300px;
-        height: 256px;
-        border-radius: 5px;
-        padding: 17px 15px;
-    }
-    
-    .card-details {
-        margin-left: 15px;
-    }
-    
-    .img-name {
-        width: 151px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 28px;
-        line-height: 40px;
-    }
-    
-    .amount {
-        height: 36px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 24px;
-        line-height: 150%;
-        display: flex;
-        align-items: center;
-        color: rgba(0, 0, 0, 0.87);
-    }
-    
-    .rating i {
-        color: #FB8200;
-        padding-right: 11px;
-        width: 8px;
-        height: 8px;
-    }
-    
-    .description {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 143%;
-        display: flex;
-        align-items: center;
-        letter-spacing: 0.018em;
-        color: #787885;
-        padding-top: 5px;
-    }
-    /* ================
-======= Contact Us ====== 
-================*/
-    
-    .contact {
-        text-align: center;
-        margin-bottom: 50px;
-    }
-    
-    .contactus-title {
-        font-style: normal;
-        font-size: 42px;
+    .brands-list li {
         margin-bottom: 10px;
     }
-    
-    .contact-img {
-        height: 240px;
-        width: 600px;
+    #products {
+        padding: 0 20px;
+        margin-bottom: -70px;
     }
-    
-    .contact-form form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 40%;
-        height: 300px;
-        justify-content: center;
-        margin-left: 450px;
+    .products {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
     }
-    
-    .contact-btn {
-        padding: 10px 24px;
-        width: 196px;
-        height: 44px;
-        background: #E02C6D;
-        border-radius: 41px;
-        border: #E02C6D;
-        color: white;
-        align-items: center;
-        cursor: pointer;
-        margin-top: 20px;
+    footer {
+        margin-top: 10px;
     }
-    
-    .text-field {
+    .contact {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* tablet devices */
+
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .link-btn {
+        font-size: 25px;
+    }
+    .section-title {
+        font-size: 40px;
+    }
+    .container {
         width: 100%;
-        margin: 10px 0;
-        padding: 10px;
-        font-size: 18px;
-        font-family: inherit;
-        outline: 0;
-        border: 1px solid #FF008E;
     }
-    /* ================
-======= Footer ====== 
-================*/
-    
-    .footer {
-        background-color: rgb(2, 2, 56);
-        color: #FFFFFF;
-        padding: 50px 580px;
-        text-align: center;
+    .nav-links {
+        display: none;
     }
-    
-    .footer-header {
-        font-style: normal;
-        font-weight: bold;
-        font-size: 24px;
-        line-height: 36px;
-        color: #FFFFFF;
-        text-align: center;
+    .header-main {
+        flex-direction: row-reverse;
+        padding: 10px 20px;
     }
-    
-    .copyright {
-        text-align: center;
-        font-style: normal;
-        font-size: 14px;
-        line-height: 24px;
-        color: #D9DBE1;
-        letter-spacing: 1px;
+    .header-left,
+    .header-right {
+        flex: 1;
     }
-    
-    .social-icon ul {
-        display: flex;
-        list-style: none;
-        justify-content: center;
-        align-items: center;
+    .header-title {
+        font-size: 45px;
     }
-    
-    .social-icon ul li a {
-        text-decoration: none;
-        list-style: none;
+    .brands {
+        margin: 50px 0;
     }
-    
-    .social-icon>ul>li>a>i {
-        text-align: center;
-        font-style: normal;
-        font-size: 24px;
-        line-height: 24px;
-        color: #D9DBE1;
-        letter-spacing: 1px;
-        text-align: center;
-        display: grid;
-        padding-right: 10px;
-        text-align: center;
-        padding-top: 15px;
-        font-size: 22px;
+    .brands-list li {
+        margin: 0 20px;
     }
-    /* ================
-======= Media Query ====== 
-================*/
-    
-    @media only screen and (max-width: 600px) {
-        .nav-icon {
-            margin-top: 30px;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 24px;
-            align-items: center;
-            margin-bottom: 50px;
-        }
-        .nav-list>ul {
-            display: none;
-        }
-        .header {
-            height: calc(100vh - 84px);
-            display: grid;
-            grid-template-rows: 1fr, 1fr;
-        }
-        .header-left {
-            order: 1;
-        }
-        .header-right {
-            order: 2;
-            padding: 50px 0;
-        }
-        .header-title {
-            width: 300px;
-            height: 78px;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 25px;
-            text-align: center;
-            margin-left: 0px;
-        }
-        .header-left p {
-            text-align: center;
-            width: 300px;
-            height: 78px;
-            margin-bottom: 60px;
-        }
-        .btn {
-            margin-left: 64px;
-        }
-        .right-arrow {
-            margin-left: 20px;
-        }
-        .background-circle {
-            text-align: center;
-        }
-        .header-img {
-            text-align: center;
-            max-width: 350px;
-        }
+    .brands-list li a img {
+        width: 130%;
     }
+    #products {
+        padding: 0 20px;
+        margin-top: 0;
+    }
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+    }
+    .see-more-btn {
+        font-size: 25px;
+    }
+    .contact {
+        grid-template-columns: 1fr;
+    }
+}
