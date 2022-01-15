@@ -25,6 +25,10 @@ body {
     margin: 0 auto;
 }
 
+.highlight {
+    color: #e02c6d;
+}
+
 .link-btn {
     display: inline-block;
     font-size: 16px;
@@ -123,19 +127,13 @@ nav {
     margin: 20px 0;
 }
 
-.header-img {
-    background-image: url('images/Circle design.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-.header-img img {
-    width: 100%;
+.header-right img {
+    width: 90%;
 }
 
 
 /* ======================
-      Brand style start 
+      Brand style  
       ======================*/
 
 .brands {
@@ -166,7 +164,7 @@ nav {
 
 
 /* ======================
-      products style start 
+      products style 
      ======================*/
 
 #products {
@@ -269,7 +267,7 @@ nav {
 
 
 /* ======================
-   contact section style start 
+   contact section style 
   ======================*/
 
 .contact {
@@ -305,7 +303,7 @@ nav {
 
 
 /* ======================
-      footer style start 
+      footer style
     ======================*/
 
 footer {
@@ -399,16 +397,18 @@ footer {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 40px;
     }
-    footer {
-        margin-top: 10px;
-    }
     .contact {
         grid-template-columns: 1fr;
+    }
+    footer {
+        margin-top: 10px;
     }
 }
 
 
-/* tablet devices */
+/* ===================
+=======Tablet devices==
+======================== */
 
 @media only screen and (min-width: 688px) and (max-width: 992px) {
     .link-btn {
